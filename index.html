@@ -1,0 +1,75 @@
+<!-- index.html -->
+<!-- Form with a text field and hidden fields. 
+Taken from Internet and World Wide Web, 5th edition by Deitel
+First completed for my ITSE 1311 class
+Additions : an embedded video
+-->
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Campus Visit Feedback</title>
+    </head>
+    
+    <body>
+        <h1>Campus Visit Feedback Form</h1>
+        
+        <p> Please fill out this form to help us improve the college.</p>
+        
+        <!-- this tag starts the the form, gives the method of sending -->
+        <!--  information to the location of the form-processing script -->
+        <form method = "post" action = "http://www.josiah.com">
+            <!-- hidden inputs contain non-visual information that will also be submitted -->
+            <input type = "hidden" name = "recipient" value = "http://www.josiah.com">
+            <input type = "hidden" name = "subject" value = "Feedback Form">
+            <input type = "hidden" name = "redirect" value = "main.html">
+            
+            <!-- <input type = "text"> inserts a text field -->
+            <p><label>Name:
+                    <input name = "name" type = "text" size = "25" maxlength = "10">
+                </label></p>
+            <p><label>E-mail:
+                    <input name = "email" type = "text" size = "25" maxlength = "10">
+                </label></p>
+            <p>
+                <strong>Things you liked:</strong><br>
+                
+                <label>Campus
+                    <input name = "thingsliked" type = "checkbox" value = "Campus"></label>
+                <label>Students
+                    <input name = "thingsliked" type = "checkbox" value = "Students"></label>
+                <label>Location
+                    <input name = "thingsliked" type = "checkbox" value = "Location"></label>
+                <label>Atmosphere
+                    <input name = "thingsliked" type = "checkbox" value = "Atmosphere"></label>
+                <label>Dorm Rooms
+                    <input name = "thingsliked" type = "checkbox" value = "Dorm"></label>
+                <label>Sports
+                    <input name = "thingsliked" type = "checkbox" value = "Sports"></label>
+            </p>
+            <p>
+                <strong>How did you become interested in this college?</strong><br>
+                
+                <label>Friends
+                    <input name = "interestedhow" type = "radio" value = "Friends"></label>
+                <label>Television
+                    <input name = "interestedhow" type = "radio" value = "Television"></label>
+                <label>Internet
+                    <input name = "interestedhow" type = "radio" value = "Internet"></label>
+                <label>Other
+                    <input name = "interestedhow" type = "radio" value = "Other"></label>
+            </p>
+            <p><label>Comments:<br>
+                <textarea name = "comments"
+                    rows = "4" cols = "36">Enter additional comments here.</textarea></label>
+            </p>
+            <p>
+                <!-- input types "submit" and "reset" insert buttons for submitting -->
+                <!-- and clearing the form's contents, respectively -->
+                <input type = "submit" value = "Submit">
+                <input type = "reset" value = "Clear">
+            </p>
+        </form>
+    <h1>Introduction to Astrology</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Bd0Hnazlgks" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </body>
+</html>
